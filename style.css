@@ -1,0 +1,318 @@
+@import url("global.css");
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+}
+
+#back-img {
+    position: fixed;
+    z-index: -1;
+    opacity: .5;
+}
+.navbar{
+     opacity: var(--img-opacity);
+}
+.navbar,
+#side-bar {
+    background: var(--background-image);
+    display: flex;
+    justify-content: space-between;
+    padding: var(--padding);
+    align-items: center;
+}
+
+.navbar .navs ul,
+.side-bar ul,
+.hero .home h5,
+.service h5,
+.service .container .sbox1 h6,
+.testinomial .feedback h5,
+.doctor h5,
+.appoinment h5 {
+    font-size: var(--nav-font);
+    font-weight: 700;
+}
+
+.navbar .navs ul,
+.side-bar ul,
+.hero .home h5 {
+    display: flex;
+    list-style: none;
+    gap: 1.9rem;
+}
+
+.navbar .navs ul li a,
+a i,
+.side-bar ul li a,
+.hero .about .content button a,
+.about button a i,
+.appoinment button a,
+.appoinment button a i,
+.footer {
+    text-decoration: none;
+    color: white;
+}
+
+#sidebar {
+    display: none;font-size: 29px;
+    color: white;
+
+}
+
+#side-bar {
+    position: absolute;
+    right: 0;
+    height: 100vh;
+    top: 5rem;
+    width: 20rem;
+    /* opacity: 2.8; */
+    z-index: 1111;
+}
+
+#side-bar ul {
+    flex-direction: column;
+}
+
+@media screen and (max-width:900px) {
+    .navs ul li {
+        display: none;
+    }
+
+    #sidebar {
+        display: block;
+    }
+}
+
+/* home */
+.hero .home,
+.about,
+.service,
+.doctor,
+.appoinment {
+    padding: 10rem 6rem 4rem 6rem;
+}
+
+.hero .home,
+.service,
+.doctor {
+    background: var(--background-image);
+    opacity: var(--img-opacity);
+    line-height: var(--line-height);
+    color: white;
+}
+
+.hero .home h1,
+.testinomial i.fa-solid.fa-quote-right {
+    font-size: var(--h1-size);
+    font-weight: var(--h1-weight);
+}
+
+.hero .home h1::after,
+.about .content h2::after {
+    content: "";
+    display: block;
+    width: 6rem;
+    height: 0.3rem;
+    background: rgba(240, 244, 245, 0.5);
+}
+
+.hero .home button,
+.about .content button,
+.testinomial button,
+.appoinment button {
+    background: var(--btn1-background);
+    border: none;
+    border-radius: 20px;
+    padding: var(--btn-padding);
+}
+
+.hero .home button a,
+button i,
+.about .content button a,
+button i,
+.testinomial button a {
+    color: black;
+    font-weight: 800;
+    font-size: var(--btn-size);
+    text-decoration: none;
+}
+
+/* about */
+.hero .about {
+    color: #0192bc;
+    background: var(--btn1-background);
+    display: flex;
+    gap: 4rem;
+    align-items: center;
+}
+
+.hero .about h2,
+.appoinment h2 {
+    font-size: var(--h2-size);
+    font-weight: var(--h1-weight);
+}
+
+.hero .about button,
+.appoinment button,
+.footer {
+    background: var(--btn2-background);
+    padding: var(--btn-padding);
+}
+
+.hero .about .content {
+    width: 80%;
+}
+
+.hero .about .box .box1 {
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    background: var(--background-image);
+    color: white;
+    padding: var(--padding);
+}
+
+.hero .about .box,
+.testinomial,
+.doctor .container .box,
+.appoinment {
+    text-align: center;
+    border-radius: 20px;
+    background: white;
+}
+
+.hero .about .box .box2 .time {
+    display: flex;
+    justify-content: space-between;
+    padding: var(--padding);
+}
+
+/* service */
+.hero .service,
+.doctor {
+    text-align: center;
+}
+
+.hero .service .container,
+.doctor .container {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    gap: 2rem;
+}
+
+.hero .service .sbox1 {
+    border: 1px solid white;
+    border-radius: 10px;
+    padding: 3rem;
+    box-shadow: 0 3px 3px 3px rgb(93, 164, 188);
+}
+
+.hero .service .sbox1:hover {
+    background: #1582a0ba;
+    transform: scale(1.003);
+}
+
+/* testinomial */
+.testinomial {
+    color: var(--btn2-background);
+    width: 30rem;
+    margin: 3rem auto;
+    padding: 4rem 5.5rem 3rem 5.5rem;
+    line-height: var(--line-height);
+}
+
+.testinomial .feedback i.fa-solid.fa-quote-right {
+    color: var(--btn1-background);
+}
+
+.doctor .container .box img {
+    width: 100%;
+}
+
+.doctor .container .box,
+.appoinment {
+    color: var(--btn2-background);
+}
+
+.footer {
+    padding: 4rem 9rem;
+    display: flex;
+    gap: 8rem;
+}
+
+.footer .contact {
+    display: flex;
+    gap: 6rem;
+}
+
+.footer h3 {
+    font-size: 24px;
+    font-weight: 600;
+}
+
+@media screen and (max-width:1200px) {
+
+    .hero .service .container,
+    .doctor .container {
+        grid-template-columns: auto auto;
+    }
+
+    .footer {
+        padding: 4rem 6rem;
+    }
+}
+
+@media screen and (max-width:830px) {
+
+    .footer,
+    .hero .about {
+        flex-direction: column;
+        gap: 1rem;
+    }
+}
+
+@media screen and (max-width:630px) {
+
+    .hero .service .container,
+    .doctor .container {
+        grid-template-columns: auto;
+    }
+
+    .footer .contact {
+        flex-direction: column;
+        gap: 1rem;
+    }
+}
+
+@media screen and (max-width:530px) {
+    .footer {
+        padding: 4rem 2rem;
+    }
+
+    .testinomial {
+        width: 20rem;
+        padding: 4rem 0.9rem 3rem 0.9rem;
+    }
+
+    .appoinment {
+        padding: 4rem 2rem 4rem 2rem;
+    }
+
+    .hero .home,
+    .about,
+    .service,
+    .doctor,
+    .appoinment {
+        padding: 10rem 1rem 4rem 1rem;
+    }
+}
+@media screen and (max-width:390px) {
+    .testinomial {
+        width: 18rem;
+        padding: 4rem 0.2rem 3rem 0.2rem;
+    }    
+    .hero .service .sbox1 {
+        padding: 1rem;
+    }
+}
